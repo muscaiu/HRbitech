@@ -1,0 +1,45 @@
+<a 
+    [routerLink]="['/users/new']" 
+    class="btn btn-success">
+Add New
+</a>   
+
+  <table class= "table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Ora</th>
+        <th>Eta</th>
+        <th>Sesso</th>
+        <th>LivelloLingua</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items | async">
+          <td><input type="text" #updatename [value]="item.name" /></td>
+          <td><input type="text" #updateemail [value]="item.email" /></td>
+          <td><input type="text" #updateora [value]="item.ora" /></td>
+          <td><input type="text" #updateeta [value]="item.eta" /></td>
+          <td><input type="text" #updatesesso [value]="item.sesso" /></td>
+          <td><input type="text" #updatelivellolingua [value]="item.livellolingua" /></td>
+          <td><button (click)="update(
+                      item.$key, 
+                      updatename.value, 
+                      updateemail.value,
+                      updateora.value,
+                      updateeta.value,
+                      updatesesso.value,
+                      updatelivellolingua.value
+                      )">Update</button></td>
+          <td class="text-center">
+              <i class="glyphicon glyphicon-remove clickable"
+                (click)="deleteItem(item.$key)">
+              </i>
+          </td>
+      <tr>
+    </tbody>
+  </table>
+<spinner [visible]="loadingLista"></spinner>
