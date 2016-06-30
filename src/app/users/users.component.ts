@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from 'angularfire2';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import {UserService} from './user.service';
+import {UserService} from '../services/user.service';
 import {SpinnerComponent} from './spinner.component'
 
 @Component({

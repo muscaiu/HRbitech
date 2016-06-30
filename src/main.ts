@@ -2,7 +2,7 @@ import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
 import { AppComponent, environment } from './app/';
 import { FIREBASE_PROVIDERS, defaultFirebase } from 'angularfire2';
-import {ROUTER_DIRECTIVES } from '@angular/router';
+
 import { APP_ROUTER_PROVIDERS } from './app/app.routes';
 //import {SlimLoadingBarService, SlimLoadingBar} from 'ng2-slim-loading-bar/ng2-slim-loading-bar';
   
@@ -20,4 +20,4 @@ bootstrap(AppComponent, [
   APP_ROUTER_PROVIDERS  ,
   //SlimLoadingBarService
 ])
-.catch(err => console.error(err));;
+.catch(err => console.error(err));
