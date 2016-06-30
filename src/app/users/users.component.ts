@@ -10,7 +10,8 @@ import {SpinnerComponent} from './spinner.component'
   selector: 'firebase-list',
   templateUrl: './users.component.html', 
   directives: [ROUTER_DIRECTIVES, SpinnerComponent],
-  providers: [UserService]
+  providers: [UserService],
+  styleUrls: ['users.component.css']
 })
 export class UsersComponent implements OnInit{
     users: FirebaseListObservable<any>;
@@ -33,7 +34,8 @@ export class UsersComponent implements OnInit{
          newOra: string,
          newEta: string,
          newSesso: string,
-         newLivelloLingua: string) {
+         newLivelloLingua: string, 
+         newData: string) {
     this.users.update(key, { 
       name: newName, 
       email: newEmail,
@@ -41,6 +43,7 @@ export class UsersComponent implements OnInit{
       eta: newEta,
       sesso: newSesso,
       livellolingua: newLivelloLingua,
+      data: newData,
      });
   }
 

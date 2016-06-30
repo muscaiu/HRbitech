@@ -25,7 +25,8 @@ export class NewUserComponent {
         newOra:[],
         newEta:[], 
         newSesso:[], 
-        newLivelloLingua:[] 
+        newLivelloLingua:[], 
+        newData:[] 
     })
     this.items = af.database.list('/hr/users')
    }
@@ -35,7 +36,8 @@ export class NewUserComponent {
            newOra: string,
            newEta: string,
            newSesso: string,
-           newLivelloLingua: string           
+           newLivelloLingua: string,
+           newData: string
            ){
             this.items.push({ 
               name: newName,
@@ -44,6 +46,7 @@ export class NewUserComponent {
               eta: newEta,
               sesso: newSesso,
               livellolingua: newLivelloLingua,
+              data: newData,
           })
           this._router.navigate(['/users'])
   }

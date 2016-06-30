@@ -1,7 +1,3 @@
-body {
-  margin: 1em;
-}
-
 .clickable{
   cursor:pointer;
 }
@@ -17,4 +13,5 @@ body {
     right: 0;
     bottom: 0;
     margin: auto;   
+    text-align: center;
 }

@@ -28,6 +28,10 @@
         <div class="control-group">LivelloLingua</div> 
             <input type="text" class="form-control" #newLivelloLingua placeholder="LivelloLingua" />
         <br>
+<!--Data-->
+        <div class="control-group">Data</div> 
+            <input type="text" class="form-control" #newData placeholder="Data" />
+        <br>
 <!--Button Submit-->
             <button [disabled]="!form.valid" type="submit" class="btn btn-success" (click)="addField(
                         newName.value, 
@@ -35,7 +39,8 @@
                         newOra.value,
                         newEta.value, 
                         newSesso.value, 
-                        newLivelloLingua.value 
+                        newLivelloLingua.value,
+                        newData.value 
                         )">
                         Save
             </button>
