@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
+import { tokenNotExpired, JwtHelper} from 'angular2-jwt';
 
 declare var Auth0Lock;
 
@@ -31,13 +31,7 @@ export class NavbarComponent{
       localStorage.setItem('profile', JSON.stringify(profile));
       localStorage.setItem('id_token', id_token);  
 
-       console.log(
-         this.jwtHelper.decodeToken(id_token),
-         this.jwtHelper.getTokenExpirationDate(id_token),
-         this.jwtHelper.isTokenExpired(id_token)
-        );
-
-        self.loggedIn();
+      self.loggedIn();
     });
   }
 

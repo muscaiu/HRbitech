@@ -13,12 +13,19 @@ Add New
         <th>Eta</th>
         <th>Sesso</th>
         <th>LivelloLingua</th>
-        <th>Update</th>
-        <th>Delete</th>
+        <!--<th>Update</th>
+        <th>Delete</th>-->
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of users | async">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.ora }}</td>
+          <td>{{ user.eta }}</td>
+          <td>{{ user.sesso }}</td>
+          <td>{{ user.livellolingua }}</td>          
+          <!--
           <td><input type="text" #updatename [value]="user.name" /></td>
           <td><input type="text" #updateemail [value]="user.email" /></td>
           <td><input type="text" #updateora [value]="user.ora" /></td>
@@ -39,6 +46,7 @@ Add New
                 (click)="deleteUser(user.$key)">
               </i>
           </td>
+          -->
       <tr>
     </tbody>
   </table>
