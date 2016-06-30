@@ -3,7 +3,7 @@
     class="btn btn-success">
 Add New
 </a>   
-
+<!--<div class="grid grid-pad">-->
   <table class= "table table-hover table-bordered">
     <thead>
       <tr>
@@ -18,15 +18,15 @@ Add New
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of items | async">
-          <td><input type="text" #updatename [value]="item.name" /></td>
-          <td><input type="text" #updateemail [value]="item.email" /></td>
-          <td><input type="text" #updateora [value]="item.ora" /></td>
-          <td><input type="text" #updateeta [value]="item.eta" /></td>
-          <td><input type="text" #updatesesso [value]="item.sesso" /></td>
-          <td><input type="text" #updatelivellolingua [value]="item.livellolingua" /></td>
+      <tr *ngFor="let user of users | async">
+          <td><input type="text" #updatename [value]="user.name" /></td>
+          <td><input type="text" #updateemail [value]="user.email" /></td>
+          <td><input type="text" #updateora [value]="user.ora" /></td>
+          <td><input type="text" #updateeta [value]="user.eta" /></td>
+          <td><input type="text" #updatesesso [value]="user.sesso" /></td>
+          <td><input type="text" #updatelivellolingua [value]="user.livellolingua" /></td>
           <td><button (click)="update(
-                      item.$key, 
+                      ueser.$key, 
                       updatename.value, 
                       updateemail.value,
                       updateora.value,
@@ -36,10 +36,11 @@ Add New
                       )">Update</button></td>
           <td class="text-center">
               <i class="glyphicon glyphicon-remove clickable"
-                (click)="deleteItem(item.$key)">
+                (click)="deleteUser(user.$key)">
               </i>
           </td>
       <tr>
     </tbody>
   </table>
 <spinner [visible]="loadingLista"></spinner>
+<!--</div>-->
