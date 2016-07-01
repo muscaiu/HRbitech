@@ -38,7 +38,7 @@ module.exports = function(defaults) {
       // below are the AngularFire entries
       'angularfire2/**/*.js',
       'firebase/*.js',
-      '@angular2-material/**/*.js'      
+      '@angular2-material/**/*.js',   
     ]
   });
 };

@@ -31,7 +31,6 @@
 <!--Data-->
         <div class="control-group">Data</div> 
         <input type="text" class="form-control" #newData placeholder="Data" />
-        <p-calendar #dateValue></p-calendar>
         <br>
 <!--Button Submit-->
         <button type="submit" class="btn btn-success"
@@ -43,7 +42,7 @@
                     newSesso.value, 
                     newLivelloLingua.value,
                     newData.value 
-                    )">
+                    ); false">
                         Save
             </button>
         </form>
