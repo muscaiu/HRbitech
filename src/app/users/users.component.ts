@@ -4,12 +4,13 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import {UserService} from './user.service';
 import {SpinnerComponent} from './spinner.component'
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 @Component({
   moduleId: module.id,
   selector: 'firebase-list',
   templateUrl: './users.component.html', 
-  directives: [ROUTER_DIRECTIVES, SpinnerComponent],
+  directives: [ROUTER_DIRECTIVES, SpinnerComponent, MD_BUTTON_DIRECTIVES],
   providers: [UserService],
   styleUrls: ['users.component.css']
 })

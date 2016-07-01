@@ -65,14 +65,14 @@ const barrels: string[] = [
   'app/formular',
   'app/login',
   'app/ss',
-  './button/button.js',
-  './card/card.js',
-  './checkbox/checkbox.js',
-  './input/input.js',
-  './progress-circle/progress-circle.js',
-  './sidenav/sidenav.js',
-  './toolbar/toolbar.js',
-  'app/mdcomponents',
+  // './button/button.js',
+  // './card/card.js',
+  // './checkbox/checkbox.js',
+  // './input/input.js',
+  // './progress-circle/progress-circle.js',
+  // './sidenav/sidenav.js',
+  // './toolbar/toolbar.js',
+  // 'app/mdcomponents',
   /** @cli-barrel */
 ];
 
