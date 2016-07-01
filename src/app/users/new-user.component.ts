@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
 import {Router} from '@angular/router';
 import {FormBuilder, ControlGroup, Validators} from '@angular/common';
-import {Calendar} from 'primeng/primeng';
-import {Spinner} from 'primeng/primeng';
 
 import {BasicValidators} from '../services/basicValidators'
 

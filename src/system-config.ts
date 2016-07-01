@@ -8,7 +8,8 @@
 /** Map relative paths to URLs. */
 const map: any = {
   'firebase': 'vendor/firebase/firebase.js',
-  'angularfire2': 'vendor/angularfire2'
+  'angularfire2': 'vendor/angularfire2',
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
@@ -16,7 +17,23 @@ const packages: any = {
   angularfire2: {
     defaultExtension: 'js',
     main: 'angularfire2.js'
-  }
+  },
+'@angular2-material/core': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'core.js'
+  },
+'@angular2-material/checkbox': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'checkbox.js'
+  },
+'@angular2-material/button': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'button.js'
+  },
+  
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,6 +44,7 @@ const barrels: string[] = [
   // Angular specific barrels.
   '@angular/core',
   '@angular/common',
+  '@angular2-material',
   '@angular/compiler',
   '@angular/http',
   '@angular/router',
@@ -47,6 +65,14 @@ const barrels: string[] = [
   'app/formular',
   'app/login',
   'app/ss',
+  './button/button.js',
+  './card/card.js',
+  './checkbox/checkbox.js',
+  './input/input.js',
+  './progress-circle/progress-circle.js',
+  './sidenav/sidenav.js',
+  './toolbar/toolbar.js',
+  'app/mdcomponents',
   /** @cli-barrel */
 ];
 

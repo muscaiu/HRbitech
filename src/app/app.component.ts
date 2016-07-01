@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import {NavbarComponent} from './navbar/navbar.component';
-//import {Profile} from './profile';
 
 @Component({
   //moduleId: module.id,
@@ -16,4 +15,4 @@ import {NavbarComponent} from './navbar/navbar.component';
 
 export class AppComponent {
   
-}
+} 
