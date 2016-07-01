@@ -1,0 +1,62 @@
+
+<div class="usersbody">
+
+  <a md-raised-button color ="primary" row 
+          [routerLink]="['/users/new']">
+          Add New
+  </a>
+
+  <!--<a 
+      [routerLink]="['/users/new']" 
+      class="btn btn-success">
+  Add New
+  </a>   -->
+
+    <table class= "table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Ora</th>
+                <th>Eta</th>
+                <th>Sesso</th>
+                <th>LivelloLingua</th>
+                <th>Data</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users | async">
+            <td><input type="text" #updatename [value]="user.name" /></td>
+            <td><input type="text" #updateemail [value]="user.email" /></td>
+            <td><input type="text" #updateora [value]="user.ora" /></td>
+            <td><input type="text" #updateeta [value]="user.eta" /></td>
+            <td><input type="text" #updatesesso [value]="user.sesso" /></td>
+            <td><input type="text" #updatelivellolingua [value]="user.livellolingua" /></td>
+            <td><input type="text" #updatedata [value]="user.data" /></td>
+            <td>
+                <button md-raised-button (click)="update(
+                        user.$key, 
+                        updatename.value, 
+                        updateemail.value,
+                        updateora.value,
+                        updateeta.value,
+                        updatesesso.value,
+                        updatelivellolingua.value,
+                        updatedata.value
+                        )">Update</button></td>
+            <td>
+                <button md-raised-button class="clickable" 
+                        (click)="deleteUser(user.$key)">Delete
+                </button>
+            </td>       
+
+        <tr>
+        </tbody>
+    </table>
+  <!--<spinner [visible]="loadingLista"></spinner>-->
+</div>
+
+
+

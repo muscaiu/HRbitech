@@ -39,6 +39,7 @@ module.exports = function(defaults) {
       'angularfire2/**/*.js',
       'firebase/*.js',
       '@angular2-material/**/*.js',   
+      'ng2-uploader/*.js',   
     ]
   });
 };

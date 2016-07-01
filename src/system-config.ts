@@ -73,6 +73,8 @@ const barrels: string[] = [
   // './sidenav/sidenav.js',
   // './toolbar/toolbar.js',
   // 'app/mdcomponents',
+  'app/statistics',
+  'app/reports',
   /** @cli-barrel */
 ];
 

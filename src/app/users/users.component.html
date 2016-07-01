@@ -4,6 +4,10 @@
           [routerLink]="['/users/new']">
           Add New
   </a>
+  <a md-raised-button color ="warn" row 
+          [routerLink]="['/users/edit']">
+          Edit Users
+  </a>
 
   <!--<a 
       [routerLink]="['/users/new']" 
@@ -34,30 +38,9 @@
             <td>{{ user.sesso }}</td>
             <td>{{ user.livellolingua }}</td>          
             <td>{{ user.data }}</td>          
-            <!--
-            <td><input type="text" #updatename [value]="user.name" /></td>
-            <td><input type="text" #updateemail [value]="user.email" /></td>
-            <td><input type="text" #updateora [value]="user.ora" /></td>
-            <td><input type="text" #updateeta [value]="user.eta" /></td>
-            <td><input type="text" #updatesesso [value]="user.sesso" /></td>
-            <td><input type="text" #updatelivellolingua [value]="user.livellolingua" /></td>
-            <td><button (click)="update(
-                        ueser.$key, 
-                        updatename.value, 
-                        updateemail.value,
-                        updateora.value,
-                        updateeta.value,
-                        updatesesso.value,
-                        updatelivellolingua.value
-                        )">Update</button></td>
-            <td class="text-center">
-                <i class="glyphicon glyphicon-remove clickable"
-                  (click)="deleteUser(user.$key)">
-                </i>
-            </td>
-            -->
+
         <tr>
       </tbody>
     </table>
-  <spinner [visible]="loadingLista"></spinner>
+  <!--<spinner [visible]="loadingLista"></spinner>-->
 </div>

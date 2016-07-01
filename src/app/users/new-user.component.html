@@ -33,7 +33,7 @@
         <input type="text" class="form-control" #newData placeholder="Data" />
         <br>
 <!--Button Submit-->
-        <button type="submit" class="btn btn-success"
+        <button type="button" class="btn btn-success"
                 [disabled]="!form.valid"  (click)="addField(
                     newName.value, 
                     newEmail.value, 
@@ -42,10 +42,9 @@
                     newSesso.value, 
                     newLivelloLingua.value,
                     newData.value 
-                    ); false">
+                    )">
                         Save
             </button>
         </form>
   </div>
 </div>
-<input type="text" pInputText/>
