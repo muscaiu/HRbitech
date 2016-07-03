@@ -14,7 +14,8 @@ export const routes: RouterConfig = [
    { path: 'users/new', component: NewUserComponent },    
    { path: 'statistics', component: StatisticsComponent },    
    { path: 'reports', component: ReportsComponent },    
-   { path: 'mdcomponents', component: MdcomponentsComponent },    
+   { path: 'mdcomponents', component: MdcomponentsComponent },   
+   { path: '**',     component: UsersComponent }, 
    //{ path: '/ss', redirectTo: '/users'},       
 //   { path: 'hero/:id', component: HeroDetailComponent }
 ];
