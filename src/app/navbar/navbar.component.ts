@@ -14,7 +14,6 @@ declare var Auth0Lock;
 export class NavbarComponent{
   lock = new Auth0Lock('9wy0lBjMWP5oi7irUcdjByrxCvm1uQqC','muscaiuuu.eu.auth0.com')
   jwtHelper: JwtHelper = new JwtHelper();
-  location: Location;
   profile : any;
 
   constructor(){

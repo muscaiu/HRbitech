@@ -17,6 +17,7 @@
         <li><a *ngIf="loggedIn()" [routerLink]="['/users']">Users</a></li>
         <li><a *ngIf="loggedIn()" [routerLink]="['/statistics']">Statistics</a></li>
         <li><a *ngIf="loggedIn()" [routerLink]="['/reports']">Reports</a></li>
+        <li><a *ngIf="loggedIn()" [routerLink]="['/todo']">ToDo</a></li>
         <!--<li><a *ngIf="loggedIn()" [routerLink]="['/mdcomponents']">MDcomponents</a></li>-->
         <!--<li [class.active]="isCurrentRoute(['Users'])"><a [routerLink]="['Users']">Users</a></li>
         <li [class.active]="isCurrentRoute(['Posts'])"><a [routerLink]="['Posts']">Posts</a></li>-->
@@ -26,7 +27,7 @@
           <input type="text" class="form-control" placeholder="Search">
           <!--<span *ngIf="loggedIn()" class="label label-danger clickable">Logged in as {{profile.nickname}}</span>-->
           <button *ngIf="!loggedIn()" (click)="login()" class="btn btn-danger">Login</button>
-          <button *ngIf="loggedIn()" (click)="logout()" class="btn btn-default">Logout</button>
+          <button *ngIf="loggedIn()"  (click)="logout()"  class="btn btn-default">Logout</button>
         </div>
       </form>
     </div><!-- /.navbar-collapse -->
