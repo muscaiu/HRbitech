@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
-import {Router} from '@angular/router';
-import {FormBuilder, ControlGroup, Validators} from '@angular/common';
+import { Router, ROUTER_DIRECTIVES} from '@angular/router';
+import { FormBuilder, ControlGroup, Validators} from '@angular/common';
 
 import {BasicValidators} from '../services/basicValidators';
 
 @Component({
   moduleId: module.id,
   selector: 'formular',
-  templateUrl : 'new-user.component.html'
+  templateUrl : 'new-user.component.html',
+  directives: [ROUTER_DIRECTIVES],
+  styleUrls: ['users.component.css']
 })
 
 export class NewUserComponent {

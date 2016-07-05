@@ -1,3 +1,8 @@
+  <a md-raised-button color ="warn" row 
+          [routerLink]="['/users']">
+          Back to List
+  </a>
+
 <div class="row">
   <div class="col-md-6 col-sm-6 well">   
     <form [ngFormModel]="form">
@@ -11,9 +16,6 @@
         <input #newEmail="ngForm" ngControl="newEmail"
                type="text" class="form-control"  placeholder="Email" />
         <div *ngIf="newEmail.touched && !newEmail.valid" class="alert alert-danger">Invalid email.</div>
-<!--Ora-->
-        <div class="control-group">Ora</div> 
-        <input type="text" class="form-control" #newOra placeholder="Ora" />
 <!--Eta-->
         <div class="control-group">Eta</div>         
         <input type="text" class="form-control" #newEta placeholder="Eta" />
@@ -27,11 +29,12 @@
 <!--LivelloLingua-->
         <div class="control-group">LivelloLingua</div> 
         <input type="text" class="form-control" #newLivelloLingua placeholder="LivelloLingua" />
-        <br>
 <!--Data-->
         <div class="control-group">Data</div> 
         <input type="date" class="form-control" #newData placeholder="Data" />
-        <br>
+<!--Ora-->
+        <div class="control-group">Ora</div> 
+        <input type="time" class="form-control" #newOra placeholder="Ora" />
 <!--Button Submit-->
         <button type="button" class="btn btn-success"
                 [disabled]="!form.valid"  (click)="addField(

@@ -14,11 +14,11 @@
         <tr>
           <th>Name</th>
           <th>Email</th>
-          <th>Ora</th>
           <th>Eta</th>
           <th>Sesso</th>
           <th>LivelloLingua</th>
           <th>Data</th>
+          <th>Ora</th>
           <!--<th>Update</th>
           <th>Delete</th>-->
         </tr>
@@ -27,11 +27,11 @@
         <tr *ngFor="let user of users | async">
             <td>{{ user.name }}</td>
             <td>{{ user.email }}</td>
-            <td>{{ user.ora }}</td>
             <td>{{ user.eta }}</td>
             <td>{{ user.sesso }}</td>
             <td>{{ user.livellolingua }}</td>
             <td>{{ user.data}}</td>
+            <td>{{ user.ora }}</td>
         <tr>
       </tbody>
     </table>

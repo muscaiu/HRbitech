@@ -14,24 +14,13 @@ import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from '
     {{todo.name}}
 </div>   
 <ul>
-    <li>
-        Customize Auth0 login window
-    </li>
-    <li>
-        Change login from email to username   
-    </li>
-    <li>
-        Add upload file button
-    </li>
-    <li>
-        Change Date field to Date type
-    </li>
-    <li>
-        Add custom date range search
-    </li>
-    <li>
-        Stop spinner
-    </li>
+    <li>Customize Auth0 login window</li>
+    <li>Change login from email to username</li>
+    <li>Add upload file button</li>
+    <li>Change Date field to Date type</li>
+    <li>Add custom date range search</li>
+    <li>Stop spinner</li>
+    <li>Implement dirty checking</li>
 </ul>    
     `,
     selector: 'todo'
