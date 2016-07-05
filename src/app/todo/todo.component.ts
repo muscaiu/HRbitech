@@ -23,12 +23,16 @@ import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from '
     <li>
         Add upload file button
     </li>
+    <li>
+        Change Date field to Date type
+    </li>
+    <li>
+        Add custom date range search
+    </li>
+    <li>
+        Stop spinner
+    </li>
 </ul>    
-
-
-
-- 
-
     `,
     selector: 'todo'
 })

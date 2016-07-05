@@ -21,13 +21,13 @@ export class UsersComponent implements OnInit{
     constructor(private _userService: UserService) {
     }
 
-      ngOnInit(){
-          this.users = this._userService.getUsers();
-          // .subscribe(
-          //   x => this.items = x,
-          //   this.loadingLista = false
-          // )
-      }
+    ngOnInit(){
+        this.users = this._userService.getUsers();
+        // .subscribe(
+        //   x => this.items = x,
+        //   this.loadingLista = false
+        // )
+    }
 
   update(key: string, 
          newName: string, 
