@@ -18,6 +18,9 @@ export class NavbarComponent{
 
   constructor(){
     this.profile = JSON.parse(localStorage.getItem('profile'));
+    // this.lock.on("authenticated", (authResult) => {
+    //     localStorage.setItem('id_token', authResult.idToken);
+    //  });
   }
   
   login(){
@@ -29,6 +32,8 @@ export class NavbarComponent{
 
       localStorage.setItem('profile', JSON.stringify(profile));
       localStorage.setItem('id_token', id_token);  
+      
+      console.log(JSON.stringify(profile));
 
       self.loggedIn();
     });

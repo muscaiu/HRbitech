@@ -21,6 +21,7 @@ import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from '
     <li>Add custom date range search</li>
     <li>Stop spinner</li>
     <li>Implement dirty checking</li>
+    <li>Refresh the page on Logout</li>
 </ul>    
     `,
     selector: 'todo'
