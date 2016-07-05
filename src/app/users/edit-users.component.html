@@ -38,7 +38,7 @@
             <td><input type="text" #updateeta [value]="user.eta" /></td>
             <td><input type="text" #updatesesso [value]="user.sesso" /></td>
             <td><input type="text" #updatelivellolingua [value]="user.livellolingua" /></td>
-            <td><input type="text" #updatedata [value]="user.data" /></td>
+            <td><input type="date" #updatedata [value]="user.data" /></td>
             <td>
                 <button md-raised-button (click)="update(
                         user.$key, 

@@ -29,25 +29,6 @@ export class UsersComponent implements OnInit{
         // )
     }
 
-  update(key: string, 
-         newName: string, 
-         newEmail: string, 
-         newOra: string,
-         newEta: string,
-         newSesso: string,
-         newLivelloLingua: string, 
-         newData: string) {
-    this.users.update(key, { 
-      name: newName, 
-      email: newEmail,
-      ora: newOra,
-      eta: newEta,
-      sesso: newSesso,
-      livellolingua: newLivelloLingua,
-      data: newData,
-     });
-  }
-
   deleteUser(key: string) {    
     if(confirm("Are u sure u want to delete "+ key + " ?")){
       this.users.remove(key)
