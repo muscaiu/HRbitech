@@ -1,53 +1,56 @@
+<div class="usersbody">
+
   <a md-raised-button color ="warn" row 
-          [routerLink]="['/users']">
-          Back to List
+       [routerLink]="['/users']">
+        Back to List
   </a>
 
-<div class="row">
-  <div class="col-md-6 col-sm-6 well">   
-    <form [ngFormModel]="form">
-<!--Name-->
-        <div class="control-group">Name</div> 
-        <input #newName="ngForm" ngControl="newName"
-                type="text" class="form-control" placeholder="Nume Prenume" />
-        <div *ngIf="newName.touched && !newName.valid" class="alert alert-danger">Name is requred.</div>
-<!--Email-->
-        <div class="control-group">Email</div> 
-        <input #newEmail="ngForm" ngControl="newEmail"
-               type="text" class="form-control"  placeholder="Email" />
-        <div *ngIf="newEmail.touched && !newEmail.valid" class="alert alert-danger">Invalid email.</div>
-<!--Eta-->
-        <div class="control-group">Eta</div>         
-        <input type="text" class="form-control" #newEta placeholder="Eta" />
-<!--Sesso-->
-        <div class="control-group">Sesso</div>  
-        <select class="form-control" #newSesso placeholder="Sesso">
-            <option></option> 
-            <option value="M">M</option>
-            <option value="F">F</option>
-        </select>        
-<!--LivelloLingua-->
-        <div class="control-group">LivelloLingua</div> 
-        <input type="text" class="form-control" #newLivelloLingua placeholder="LivelloLingua" />
-<!--Data-->
-        <div class="control-group">Data</div> 
-        <input type="date" class="form-control" #newData placeholder="Data" />
-<!--Ora-->
-        <div class="control-group">Ora</div> 
-        <input type="time" class="form-control" #newOra placeholder="Ora" />
-<!--Button Submit-->
-        <button type="button" class="btn btn-success"
-                [disabled]="!form.valid"  (click)="addField(
-                    newName.value, 
-                    newEmail.value, 
-                    newOra.value,
-                    newEta.value, 
-                    newSesso.value, 
-                    newLivelloLingua.value,
-                    newData.value 
-                    )">
-                        Save
-            </button>
-        </form>
-  </div>
+  <div class="row">
+        <div class="col-md-6 col-sm-6 well">   
+        <form [ngFormModel]="form">
+        <!--Name-->
+                <div class="control-group">Name</div> 
+                <input #newName="ngForm" ngControl="newName"
+                        type="text" class="form-control" placeholder="Nume Prenume" />
+                <div *ngIf="newName.touched && !newName.valid" class="alert alert-danger">Name is requred.</div>
+        <!--Email-->
+                <div class="control-group">Email</div> 
+                <input #newEmail="ngForm" ngControl="newEmail"
+                type="text" class="form-control"  placeholder="Email" />
+                <div *ngIf="newEmail.touched && !newEmail.valid" class="alert alert-danger">Invalid email.</div>
+        <!--Eta-->
+                <div class="control-group">Eta</div>         
+                <input type="text" class="form-control" #newEta placeholder="Eta" />
+        <!--Sesso-->
+                <div class="control-group">Sesso</div>  
+                <select class="form-control" #newSesso placeholder="Sesso">
+                <option></option> 
+                <option value="M">M</option>
+                <option value="F">F</option>
+                </select>        
+        <!--LivelloLingua-->
+                <div class="control-group">LivelloLingua</div> 
+                <input type="text" class="form-control" #newLivelloLingua placeholder="LivelloLingua" />
+        <!--Data-->
+                <div class="control-group">Data</div> 
+                <input type="date" class="form-control" #newData placeholder="Data" />
+        <!--Ora-->
+                <div class="control-group">Ora</div> 
+                <input type="time" class="form-control" #newOra placeholder="Ora" />
+        <!--Button Submit-->
+                <button type="button" class="btn btn-success"
+                        [disabled]="!form.valid"  (click)="addField(
+                        newName.value, 
+                        newEmail.value, 
+                        newOra.value,
+                        newEta.value, 
+                        newSesso.value, 
+                        newLivelloLingua.value,
+                        newData.value 
+                        )">
+                                Save
+                </button>
+                </form>
+        </div>
+    </div>
 </div>

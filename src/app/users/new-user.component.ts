@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
 import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { FormBuilder, ControlGroup, Validators} from '@angular/common';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 import {BasicValidators} from '../services/basicValidators';
 
@@ -9,7 +10,7 @@ import {BasicValidators} from '../services/basicValidators';
   moduleId: module.id,
   selector: 'formular',
   templateUrl : 'new-user.component.html',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, MD_BUTTON_DIRECTIVES],
   styleUrls: ['users.component.css']
 })
 
