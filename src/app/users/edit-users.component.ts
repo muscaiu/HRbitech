@@ -31,20 +31,22 @@ export class EditUsersComponent implements OnInit{
   update(key: string, 
          newName: string, 
          newEmail: string, 
-         newOra: string,
          newEta: string,
          newSesso: string,
          newLivelloLingua: string,
-         newData:string) {
-    this.users.update(key, { 
-      name: newName, 
-      email: newEmail,
-      ora: newOra,
-      eta: newEta,
-      sesso: newSesso,
-      livellolingua: newLivelloLingua,
-      data: newData
-     });
+         newData:string,
+         newOra: string) {
+            this.users.update(
+              key, 
+              { 
+              name: newName, 
+              email: newEmail,
+              eta: newEta,
+              sesso: newSesso,
+              livellolingua: newLivelloLingua,
+              data: newData,
+              ora: newOra
+            });
   }
 
   deleteUser(key: string) {    

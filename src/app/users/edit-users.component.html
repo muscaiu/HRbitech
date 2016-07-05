@@ -5,10 +5,16 @@
           [routerLink]="['/users/new']">
           Add New
   </a>
-    <a md-raised-button color ="warn" row 
+  <a md-raised-button color ="warn" row 
           [routerLink]="['/users']">
           Back to List
   </a>
+
+  <!--<a 
+      [routerLink]="['/users/new']" 
+      class="btn btn-success">
+  Add New
+  </a>   -->
 
     <table class= "table table-hover table-bordered">
         <thead>
@@ -19,9 +25,9 @@
                 <th>Sesso</th>
                 <th>LivelloLingua</th>
                 <th>Data</th>
+                <th>Ora</th>
                 <th>Update</th>
                 <th>Delete</th>
-                <th>Ora</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +37,7 @@
             <td><input type="text" #updateeta [value]="user.eta" /></td>
             <td><input type="text" #updatesesso [value]="user.sesso" /></td>
             <td><input type="text" #updatelivellolingua [value]="user.livellolingua" /></td>
-            <td><input type="date" #updatedata [value]="user.data" /></td>
+            <td><input type="text" #updatedata [value]="user.data" /></td>
             <td><input type="text" #updateora [value]="user.ora" /></td>
             <td>
                 <button md-raised-button (click)="update(
