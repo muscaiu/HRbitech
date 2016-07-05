@@ -74,6 +74,7 @@ const barrels: string[] = [
   // 'app/mdcomponents',
   'app/statistics',
   'app/reports',
+  'app/home',
   /** @cli-barrel */
 ];
 
