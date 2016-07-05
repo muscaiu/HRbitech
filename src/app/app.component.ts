@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { tokenNotExpired, JwtHelper} from 'angular2-jwt';
 
+import {HomeComponent } from './home/home.component';
+
 declare var Auth0Lock;
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES, HomeComponent]
 })
 
 export class AppComponent {

@@ -24,12 +24,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users | async">
+        <tr *ngFor="let user of users | async ">
             <td>{{ user.name }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.eta }}</td>
             <td>{{ user.sesso }}</td>
-            <td>{{ user.livellolingua }}</td>
+            <td>{{ user.livellolingua | summary:5 }}</td>
             <td>{{ user.data}}</td>
             <td>{{ user.ora }}</td>
         <tr>
