@@ -7,7 +7,7 @@ import {MdcomponentsComponent} from './mdcomponents/mdcomponents.component';
 import {StatisticsComponent} from './statistics/statistics.component';
 import {ReportsComponent} from './reports/reports.component';
 import {ToDoComponent} from './todo/todo.component';
-import {AuthGuard} from './navbar/auth.guard';
+import {AuthGuard} from './auth.guard';
 
 export const routes: RouterConfig = [
    { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },   

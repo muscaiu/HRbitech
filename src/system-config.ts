@@ -58,7 +58,6 @@ const barrels: string[] = [
   'app',
   'app/shared',
   'app/firebase-list',
-  'app/navbar',
   'app/test-route',
   'app/test-component',
   'app/home-component',
