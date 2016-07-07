@@ -24,20 +24,18 @@
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
           <!--<span *ngIf="loggedIn()" class="label label-danger clickable">Logged in as {{profile.nickname}}</span>-->
-          <button *ngIf="!loggedIn()" (click)="login()" class="btn btn-danger">Login</button>
-          <button *ngIf="loggedIn()"  (click)="logout()"  class="btn btn-default">Logout</button>
+          <button *ngIf="!loggedIn()" (click)="login()" md-raised-button color ="warn">Login</button>
+          <button *ngIf="loggedIn()"  (click)="logout()"  md-raised-button color ="primary">Logout</button>
         </div>
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<app-home>
+<!--<app-home>
   <div class="body1">inserting text ... </div>
   <div class="body2">from app.component to home.component</div>
-
-</app-home>
+</app-home>-->
 
 <router-outlet></router-outlet>

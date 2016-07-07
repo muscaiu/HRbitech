@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from 'angularfire2';
+//import * as _ from 'underscore';
 
 @Component({
     template: `
@@ -22,6 +23,9 @@ import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from '
     <li>Stop spinner</li>
     <li>Implement dirty checking</li>
     <li>Refresh the page on Logout</li>
+    <li>Add search box</li>
+    <li>Add sorting</li>
+    <li>Try use _underscore to filter and search data</li>
 </ul>    
     `,
     selector: 'todo'
@@ -30,6 +34,7 @@ export class ToDoComponent{
     todos: FirebaseListObservable<any>;
     
     contructor(af : AngularFire){
-        this.todos = af.database.list('hr/todos')
+        this.todos = af.database.list('hr/todos');
+        console.log(_);
     }
 }

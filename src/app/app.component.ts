@@ -3,6 +3,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { tokenNotExpired, JwtHelper} from 'angular2-jwt';
 
 import {HomeComponent } from './home/home.component';
+import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 
 declare var Auth0Lock;
 
@@ -10,7 +11,7 @@ declare var Auth0Lock;
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  directives: [ROUTER_DIRECTIVES, HomeComponent]
+  directives: [ROUTER_DIRECTIVES, HomeComponent, MD_BUTTON_DIRECTIVES]
 })
 
 export class AppComponent {

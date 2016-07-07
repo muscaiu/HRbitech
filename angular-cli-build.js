@@ -40,6 +40,7 @@ module.exports = function(defaults) {
       'firebase/*.js',
       '@angular2-material/**/*.js',   
       'ng2-uploader/*.js',   
+      'underscore/underscore.js',   
     ]
   });
 };

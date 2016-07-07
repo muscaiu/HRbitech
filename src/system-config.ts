@@ -9,7 +9,8 @@
 const map: any = {
   'firebase': 'vendor/firebase/firebase.js',
   'angularfire2': 'vendor/angularfire2',
-  '@angular2-material': 'vendor/@angular2-material'
+  '@angular2-material': 'vendor/@angular2-material',
+  'underscore': 'vendor/underscore/underscore.js'
 };
 
 /** User packages configuration. */
@@ -18,22 +19,24 @@ const packages: any = {
     defaultExtension: 'js',
     main: 'angularfire2.js'
   },
-'@angular2-material/core': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'core.js'
-  },
-'@angular2-material/checkbox': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'checkbox.js'
-  },
-'@angular2-material/button': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'button.js'
-  },
-  
+  '@angular2-material/core': {
+      format: 'cjs',
+      defaultExtension: 'js',
+      main: 'core.js'
+    },
+  '@angular2-material/checkbox': {
+      format: 'cjs',
+      defaultExtension: 'js',
+      main: 'checkbox.js'
+    },
+  '@angular2-material/button': {
+      format: 'cjs',
+      defaultExtension: 'js',
+      main: 'button.js'
+    },
+  'underscore':{
+      format: 'cjs'
+    }  
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
