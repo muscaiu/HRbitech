@@ -17,7 +17,7 @@ import {BasicValidators} from '../services/basicValidators';
 export class NewUserComponent {
   dateValue:string;
   form: ControlGroup ;
-  items: FirebaseListObservable<any>;
+  users: FirebaseListObservable<any>;
 
   constructor(af: AngularFire, 
               private _router: Router,
@@ -32,7 +32,7 @@ export class NewUserComponent {
         newLivelloLingua:[], 
         newData:[] 
     })
-    this.items = af.database.list('/hr/users')
+    this.users = af.database.list('/hr/users')
    }
 
   addField(newName: string, 
@@ -43,7 +43,7 @@ export class NewUserComponent {
            newLivelloLingua: string,
            newData: string
            ){
-            this.items.push({ 
+            this.users.push({ 
               name: newName,
               email: newEmail,
               ora: newOra,

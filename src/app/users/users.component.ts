@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable , FirebaseListObservable } from 'angularfire2';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import { UserService } from './user.service';
 import { SpinnerComponent } from './spinner.component'
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { SummaryPipe } from './summary-pipe';
@@ -12,7 +11,6 @@ import { SummaryPipe } from './summary-pipe';
   selector: 'firebase-list',
   templateUrl: './users.component.html', 
   directives: [ROUTER_DIRECTIVES, SpinnerComponent, MD_BUTTON_DIRECTIVES],
-  providers: [UserService],
   styleUrls: ['users.component.css'],
   pipes: [SummaryPipe]
 })
@@ -20,11 +18,11 @@ export class UsersComponent implements OnInit{
     users: FirebaseListObservable<any>;
     loadingLista = true;
 
-    constructor(private _userService: UserService) {
+    constructor(private _af: AngularFire) {
     }
 
     ngOnInit(){
-        this.users = this._userService.getUsers();
+        this.users = this._af.database.list('hr/users');
         // .subscribe(
         //   x => this.items = x,
         //   this.loadingLista = false
