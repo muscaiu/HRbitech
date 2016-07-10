@@ -12,30 +12,29 @@ import { AngularFire, FirebaseObjectObservable ,FirebaseListObservable } from 'a
         (keyup.enter)="addTodo(newTodo.value)"
         type="text" 
 />  
-{{ todoinput }}
-<br>
-{{ item | async | json }}
+ {{ todoinput }}
 
 <div *ngFor="let todo of todos | async">
-    {{todo.todo}}
+
+    <span> {{todo.todo}} </span>
+
     <button (click)="deleteTodo(todo.$key)">Delete</button>
     <button (click)="finishedTodo(todo.$key)">Finished</button>
 </div>   
-  
-    `,
-    selector: 'todo'
+    `
 })
 
 export class ToDoComponent implements OnInit{
-    item: FirebaseObjectObservable<any>;
     todos: FirebaseListObservable<any>;
-
+    
     constructor(private _af: AngularFire) {
     }
 
     ngOnInit(){
         this.todos = this._af.database.list('hr/todos');
-        this.item = this._af.database.object('/hr/todos/1');
+        //this.finished = this._af.database.object('/hr/todos/1');
+        //this.finished = JSON.stringify(this.finished).
+        
         //console.log(this.item.map(x=>this.item = x))
         // .subscribe(
         //   x => this.items = x,
@@ -55,8 +54,24 @@ export class ToDoComponent implements OnInit{
         }
     }
 
-    finishedTodo(key: string, finished: boolean){
-        this.todos.update(key,{finished: true})
+    finishedTodo(key: string, finished: boolean, isFinished: boolean){
+       
+        var snapshotFinished = this._af.database.object('hr/todos/'+ key,{ preserveSnapshot: true})
+
+        snapshotFinished.subscribe(snapshot => {          
+            isFinished = snapshot.val().finished;  
+        });
+
+        if (isFinished == false || isFinished == null){
+            this.todos.update(key,{finished: true});
+            isFinished = true;
+            console.log(isFinished);
+        }    
+        else{
+            this.todos.update(key,{finished: false});
+            isFinished = false;
+            console.log(isFinished);
+        }
     }
 }
 
