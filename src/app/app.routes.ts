@@ -8,6 +8,7 @@ import {StatisticsComponent} from './statistics/statistics.component';
 import {ReportsComponent} from './reports/reports.component';
 import {ToDoComponent} from './todo/todo.component';
 import {AuthGuard} from './auth.guard';
+import { HomeComponent} from './home/home.component';
 
 export const routes: RouterConfig = [
    { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },   
@@ -16,7 +17,8 @@ export const routes: RouterConfig = [
    { path: 'statistics', component: StatisticsComponent, canActivate: [AuthGuard]  },    
    { path: 'reports', component: ReportsComponent, canActivate: [AuthGuard]  },    
    { path: 'mdcomponents', component: MdcomponentsComponent },      
-   { path: 'todo', component: ToDoComponent },      
+   { path: 'todo', component: ToDoComponent, canActivate: [AuthGuard]  },      
+   { path: '', component: HomeComponent  },      
    //{ path: '**', component: App }, 
    //{ path: '/ss', redirectTo: '/users'},       
 //   { path: 'hero/:id', component: HeroDetailComponent }

@@ -28,6 +28,7 @@ export class AppComponent {
   
   login(){
     var self = this;
+
     this.lock.show((err: string, profile: string, id_token: string) =>{
       if (err){
         throw new Error(err);
@@ -37,6 +38,7 @@ export class AppComponent {
       localStorage.setItem('id_token', id_token);  
       
       console.log(JSON.stringify(profile));
+      console.log(id_token);
 
       self.loggedIn();
     });
