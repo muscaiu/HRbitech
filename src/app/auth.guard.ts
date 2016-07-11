@@ -5,7 +5,6 @@ import { tokenNotExpired } from 'angular2-jwt';
 export class AuthGuard implements CanActivate {
   canActivate() {
       if (tokenNotExpired()) {
-        console.log('AuthGuard#canActivate called');
         return true;
       }
     }
