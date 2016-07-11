@@ -14,26 +14,34 @@ export class AuthService{
     }
 
     public login(){
+        var self = this;
+
         this.lock.show({}, (err: string, profile: Object, id_token: string) => {
             if (err) {console.log(err); return;}
             localStorage.setItem('profile', JSON.stringify(profile));
             localStorage.setItem('id_token', id_token); 
         });
+
+        self.loggedIn();
     }
 
     public logout(){
         localStorage.removeItem('profile');
         localStorage.removeItem('id_token');
+        console.log('logged out')
     }
 
     public loggedIn(){
+        console.log('logged in');
         return tokenNotExpired;
     }
 
     public isAdmin() {
         if (this.user['role'] == 'admin') {
+            console.log('is admin')
             return true;
         } else {
+            console.log('is not admin')
             return false;
         }
     }
