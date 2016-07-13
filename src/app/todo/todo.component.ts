@@ -1,27 +1,37 @@
 import { Component, OnInit} from '@angular/core';
 import { AngularFire, FirebaseObjectObservable ,FirebaseListObservable } from 'angularfire2';
+import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 
 @Component({
     template: `
-<h2>ToDo</h2>
+    
+<button (click)="_af.auth.login()">Firebase Login</button>
 
-<input 
-        #newTodo
-        [(ngModel)]="todoinput" 
-        placeholder="add ToDo" 
-        (keyup.enter)="addTodo(newTodo.value)"
-        type="text" 
-/>  
- {{ todoinput }}
+<md-card>
+    <md-card-title>Todo</md-card-title>
 
-<div *ngFor="let todo of todos | async">
+    <md-card-title>
+        <input 
+            #newTodo
+            [(ngModel)]="todoinput" 
+            placeholder="add ToDo" 
+            (keyup.enter)="addTodo(newTodo.value)"
+            type="text" 
+    />  
+    {{ todoinput }}
+</md-card-title>
 
-    <span> {{todo.todo}} </span>
+    <md-card-subtitle *ngFor="let todo of todos | async">
 
-    <button (click)="deleteTodo(todo.$key)">Delete</button>
-    <button (click)="finishedTodo(todo.$key)">Finished</button>
-</div>   
-    `
+        <span> {{todo.todo}} </span>
+
+        <button (click)="deleteTodo(todo.$key)">Delete</button>
+        <button (click)="finishedTodo(todo.$key)">Finished</button>
+    </md-card-subtitle>  
+</md-card>
+
+    `,
+    directives:[MD_CARD_DIRECTIVES]
 })
 
 export class ToDoComponent implements OnInit{

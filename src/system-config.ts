@@ -18,26 +18,25 @@ const packages: any = {
   angularfire2: {
     defaultExtension: 'js',
     main: 'angularfire2.js'
-  },
-  '@angular2-material/core': {
-      format: 'cjs',
-      defaultExtension: 'js',
-      main: 'core.js'
-    },
-  '@angular2-material/checkbox': {
-      format: 'cjs',
-      defaultExtension: 'js',
-      main: 'checkbox.js'
-    },
-  '@angular2-material/button': {
-      format: 'cjs',
-      defaultExtension: 'js',
-      main: 'button.js'
-    },
-  'underscore':{
-      format: 'cjs'
-    }  
+  }
 };
+
+//ONLY FOR @angular-material
+const materialPkgs:string[] = [
+  'core',
+  'button',
+  'card',
+  'checkbox',
+  'list',
+  'input',
+  'progress-circle',
+  'sidenav',
+  'toolbar',
+];
+materialPkgs.forEach((pkg) => {
+  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
+});
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
