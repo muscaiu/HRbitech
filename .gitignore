@@ -33,3 +33,5 @@ testem.log
 Thumbs.db
 */assets/primeui/*
 */assets/primeng/*
+/bower_components
+/public

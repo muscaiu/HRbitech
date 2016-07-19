@@ -11,7 +11,6 @@
   <link rel='stylesheet' href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" >-->
   <link rel="stylesheet" href="assets/css/styles.css">
 
-
   {{#unless environment.production}}
   <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
   {{/unless}}
@@ -21,46 +20,27 @@
   <!--Flatly Bootswatch and Materialize-->
  <script src="http://cdn.auth0.com/js/lock-9.min.js"></script>
   
-
-    <!-- JAVASCRIPT JS FILES -->
-    <!--<script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery.knob.js"></script>
-    <script src="assets/js/jquery.ui.widget.js"></script>
-    <script src="assets/js/jquery.iframe-transport.js"></script>
-    <script src="assets/js/jquery.fileupload.js"></script>
-    <script src="assets/js/uploadScript.js"></script>-->
-
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">-->
 </head>
+
 <body>
-
-    <!--<form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
-        <div id="drop">
-            <a>INCARCA CV</a> Drag and Drop
-            <input type="file" name="upl" />
-        </div>
-
-        <ul id="uploadList">
-        </ul>
-    </form>-->
-
   <app-root>
       <h2 class="loading-gif">Loading...<h2>
       <!--<img src="/assets/img/loader.gif"
       class="loading-gif"
       alt="Loading...">      -->
-  </app-root>
+  </app-root>  
 
-  
-
-    {{#each scripts.polyfills}}
-    <script src="{{.}}"></script>
-    {{/each}}
-    <script>
+    {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="elements.html">
+    
+  <script>
+    document.addEventListener('WebComponentsReady', function() {
       System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
-    </script>
+    });
+  </script>
 
   
 

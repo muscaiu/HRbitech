@@ -10,7 +10,8 @@ const map: any = {
   'firebase': 'vendor/firebase/firebase.js',
   'angularfire2': 'vendor/angularfire2',
   '@angular2-material': 'vendor/@angular2-material',
-  'underscore': 'vendor/underscore/underscore.js'
+  'underscore': 'vendor/underscore/underscore.js',
+  '@vaadin': 'vendor/@vaadin'
 };
 
 /** User packages configuration. */
@@ -18,6 +19,10 @@ const packages: any = {
   angularfire2: {
     defaultExtension: 'js',
     main: 'angularfire2.js'
+  },
+  '@vaadin/angular2-polymer': { 
+    main: 'index.js', 
+    defaultExtension: 'js' 
   }
 };
 

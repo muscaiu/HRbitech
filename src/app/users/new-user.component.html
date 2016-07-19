@@ -37,6 +37,26 @@
         <!--Ora-->
                 <div class="control-group">Ora</div> 
                 <input type="time" class="form-control" #newOra placeholder="Ora" />
+        <!--Upload File-->
+
+                <style is="custom-style">
+                vaadin-upload {
+                --primary-color: #396;
+                --vaadin-upload-file-row: {
+                        background-color: rgba(183, 225, 205, 0.24);
+                        padding: 5px;
+                        border-radius: 4px 4px 0px 0px;
+                };
+                }
+                </style>
+                <vaadin-upload 
+                        target="http://localhost:4200/upload"
+                        max-files="2" max-file-size="2000000"
+                        accept="application/pdf,image/*" 
+                        >
+                </vaadin-upload>
+
+
         <!--Button Submit-->
                 <button type="button" class="btn btn-success"
                         [disabled]="!form.valid"  (click)="addField(

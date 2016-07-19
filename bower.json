@@ -1,0 +1,19 @@
+{
+  "name": "hr-bitech",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/muscaiu/HRbitech",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vaadin-upload": "^1.0.1",
+    "paper-elements": "^1.0.7",
+    "vaadin-combo-box": "^1.1.1"
+  }
+}

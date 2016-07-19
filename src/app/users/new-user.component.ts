@@ -3,6 +3,7 @@ import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'a
 import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { FormBuilder, ControlGroup, Validators} from '@angular/common';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
+import { PolymerElement } from '@vaadin/angular2-polymer';
 
 import {BasicValidators} from '../services/basicValidators';
 
@@ -10,7 +11,10 @@ import {BasicValidators} from '../services/basicValidators';
   moduleId: module.id,
   selector: 'formular',
   templateUrl : 'new-user.component.html',
-  directives: [ROUTER_DIRECTIVES, MD_BUTTON_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES, 
+               MD_BUTTON_DIRECTIVES, 
+               PolymerElement('vaadin-upload'),
+               ],
   styleUrls: ['users.component.css']
 })
 

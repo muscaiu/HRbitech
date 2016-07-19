@@ -5,8 +5,6 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 @Component({
     template: `
     
-<button (click)="_af.auth.login()">Firebase Login</button>
-
 <md-card>
     <md-card-title>Todo</md-card-title>
 
