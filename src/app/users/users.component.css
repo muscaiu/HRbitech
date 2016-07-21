@@ -9,3 +9,7 @@
 a{
   text-decoration: none;
 }
+
+vaadin-grid {
+  height: 300px;
+}

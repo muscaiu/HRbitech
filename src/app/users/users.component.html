@@ -35,5 +35,15 @@
         <tr>
       </tbody>
     </table>
-  <spinner [visible]="loadingLista"></spinner>
+  <!--<spinner [visible]="loadingLista"></spinner>-->
 </div>
+
+    <vaadin-grid [items]="people">
+      <table>
+        <colgroup>
+          <col name="firstName">
+          <col name="lastName">
+          <col name="email">
+        </colgroup>
+      </table>
+    </vaadin-grid>
