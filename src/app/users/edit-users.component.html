@@ -40,19 +40,25 @@
             <td><input type="text" #updatedata [value]="user.data" /></td>
             <td><input type="text" #updateora [value]="user.ora" /></td>
             <td>
-                <button md-raised-button (click)="update(
-                        user.$key, 
-                        updatename.value, 
-                        updateemail.value,
-                        updateeta.value,
-                        updatesesso.value,
-                        updatelivellolingua.value,
-                        updatedata.value,
-                        updateora.value
-                        )">Update</button></td>
+                <button md-raised-button 
+                        color ="primary"
+                        (click)="update (
+                            user.$key, 
+                            updatename.value, 
+                            updateemail.value,
+                            updateeta.value,
+                            updatesesso.value,
+                            updatelivellolingua.value,
+                            updatedata.value,
+                            updateora.value)">
+                        Update
+                </button>
+            </td>
             <td>
                 <button md-raised-button class="clickable" 
-                        (click)="deleteUser(user.$key)">Delete
+                        (click)="deleteUser(user.$key)"
+                        color="warn">
+                    Delete
                 </button>
             </td>       
 

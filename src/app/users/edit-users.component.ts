@@ -45,6 +45,7 @@ export class EditUsersComponent implements OnInit{
               data: newData,
               ora: newOra
             });
+          alert(name + " Updated")
   }
 
   deleteUser(key: string) {    
