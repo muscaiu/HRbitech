@@ -2,7 +2,7 @@
 
   <a md-raised-button color ="warn" row 
        [routerLink]="['/users']">
-        Back to List
+        Back
   </a>
 
   <div class="row">
@@ -50,7 +50,7 @@
                 }
                 </style>
                 <vaadin-upload 
-                        target="http://localhost:4200/upload"
+                        target="http://localhost:8080/upload"
                         max-files="2" max-file-size="2000000"
                         accept="application/pdf,image/*" 
                         >
@@ -70,7 +70,7 @@
                         )">
                                 Save
                 </button>
-                </form>
+        </form>
         </div>
     </div>
 </div>
