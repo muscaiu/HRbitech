@@ -14,11 +14,18 @@ import {BasicValidators} from '../services/basicValidators';
   directives: [ROUTER_DIRECTIVES, 
                MD_BUTTON_DIRECTIVES, 
                PolymerElement('vaadin-upload'),
+               PolymerElement('vaadin-date-picker'),
+               PolymerElement('vaadin-combo-box'),
                ],
   styleUrls: ['users.component.css']
 })
 
 export class NewUserComponent {
+    selectedSsso = '';
+    Sesso = ['M', 'F'];
+    selectedLivelloLingua = '';
+    livelloLingua = ['Low', 'Medium', 'High' ,'Native'];
+
   dateValue:string;
   form: ControlGroup ;
   users: FirebaseListObservable<any>;
