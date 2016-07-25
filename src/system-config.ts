@@ -11,7 +11,8 @@ const map: any = {
   'angularfire2': 'vendor/angularfire2',
   '@angular2-material': 'vendor/@angular2-material',
   'underscore': 'vendor/underscore/underscore.js',
-  '@vaadin': 'vendor/@vaadin'
+  '@vaadin': 'vendor/@vaadin',
+  'ng2-uploader': 'vendor/ng2-uploader'
 };
 
 /** User packages configuration. */
@@ -22,6 +23,10 @@ const packages: any = {
   },
   '@vaadin/angular2-polymer': { 
     main: 'index.js', 
+    defaultExtension: 'js' 
+  },
+  'ng2-uploader': { 
+    main: 'ng2-uploader.js', 
     defaultExtension: 'js' 
   }
 };

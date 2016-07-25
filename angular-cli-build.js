@@ -40,7 +40,8 @@ module.exports = function(defaults) {
       'firebase/*.js',
       '@angular2-material/**/*.js',   
       'underscore/underscore.js',
-      '@vaadin/**/*.+(js|js.map)'
+      '@vaadin/**/*.+(js|js.map)',
+      'ng2-uploader/*.js', 
     ]
   });
 };

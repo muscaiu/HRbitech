@@ -4,6 +4,7 @@ import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { FormBuilder, ControlGroup, Validators} from '@angular/common';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { PolymerElement } from '@vaadin/angular2-polymer';
+import { UPLOAD_DIRECTIVES} from 'ng2-uploader/ng2-uploader';
 
 import {BasicValidators} from '../services/basicValidators';
 
@@ -16,6 +17,7 @@ import {BasicValidators} from '../services/basicValidators';
                PolymerElement('vaadin-upload'),
                PolymerElement('vaadin-date-picker'),
                PolymerElement('vaadin-combo-box'),
+               UPLOAD_DIRECTIVES
                ],
   styleUrls: ['users.component.css']
 })
@@ -64,5 +66,17 @@ export class NewUserComponent {
               data: newData,
           })
           this._router.navigate(['/users'])
+  }
+
+  uploadFile: any;
+  options: Object = {
+    url: 'http://localhost:10050/upload'
+  };
+
+  handleUpload(data): void {
+    if (data && data.response) {
+      data = JSON.parse(data.response);
+      this.uploadFile = data;
+    }
   }
 }
