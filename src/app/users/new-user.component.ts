@@ -78,6 +78,7 @@ export class NewUserComponent {
     if (data && data.response){
       data = JSON.parse(data.response);
       this.uploadFile = data;
+      //console.log( uploadFile);
     }
   }
 }

@@ -1,11 +1,3 @@
-<input type="file" 
-       [ng-file-select]="options"
-       (onUpload)="handleUpload($event)">
-
-<div>
-Response: {{ uploadFile | json }}
-</div>
-
 <div class="usersbody">
 
   <a md-raised-button color ="warn" row 
@@ -60,23 +52,21 @@ Response: {{ uploadFile | json }}
                 <input type="time" class="form-control" #newOra placeholder="Ora" />
         <!--Upload File-->
                 <br>
+                <div *ngIf="newName.valid">
+                        <vaadin-upload 
+                                target="http://localhost:10050/upload"
+                                max-files="1" max-file-size="2000000"
+                                accept="application/pdf,image/*" 
+                                [ng-file-select]="options"
+                                (onUpload)="handleUpload($event)"
+                                >
+                        </vaadin-upload>
+                </div>
 
-                <style is="custom-style">
-                vaadin-upload {
-                --primary-color: #396;
-                --vaadin-upload-file-row: {
-                        background-color: rgba(183, 225, 205, 0.24);
-                        padding: 5px;
-                        border-radius: 4px 4px 0px 0px;
-                };
-                }
-                </style>
-                <vaadin-upload 
-                        target="http://localhost:8080/upload"
-                        max-files="2" max-file-size="2000000"
-                        accept="application/pdf,image/*" 
-                        >
-                </vaadin-upload>
+                <!--<input type="file" 
+                        [ng-file-select]="options"
+                        (onUpload)="handleUpload($event)">-->
+
         <!--Button Submit-->
                 <button type="button" class="btn btn-success"
                         [disabled]="!form.valid"  (click)="addField(
