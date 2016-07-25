@@ -70,11 +70,12 @@ export class NewUserComponent {
 
   uploadFile: any;
   options: Object = {
-    url: 'http://localhost:10050/upload'
+    url: 'http://localhost:10050/upload',
+    //fieldName: 'logo'   
   };
-
-  handleUpload(data): void {
-    if (data && data.response) {
+  
+  handleUpload(data) : void{
+    if (data && data.response){
       data = JSON.parse(data.response);
       this.uploadFile = data;
     }
