@@ -41,6 +41,7 @@ module.exports = function(defaults) {
       '@angular2-material/**/*.js',   
       'underscore/underscore.js',
       '@vaadin/**/*.+(js|js.map)',
+      'ng2-uploader/**/*.js', 
       'ng2-uploader/*.js', 
     ]
   });

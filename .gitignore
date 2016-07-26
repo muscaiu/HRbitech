@@ -35,3 +35,5 @@ Thumbs.db
 */assets/primeng/*
 /bower_components
 /public
+/uploads
+/servers/uploads

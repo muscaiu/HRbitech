@@ -28,11 +28,14 @@ const upload = {
 
       files.file.forEach((file) => {
         let fileData = fs.readFileSync(file.path);
+
         const originalName = file.originalFilename;
+
         const generatedName = Md5(new Date().toString() + 
           originalName) + path.extname(originalName);
+
         const filePath = path.resolve(__dirname, 'uploads', 
-          generatedName);
+          originalName);
 
         fs.writeFileSync(filePath, fileData);
         const data = {
