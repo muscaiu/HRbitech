@@ -52,14 +52,16 @@
                 <input type="time" class="form-control" #newOra placeholder="Ora" />
         <!--Upload File-->
                 <br>
+                
                 <div *ngIf="newName.valid">
                         <vaadin-upload 
                                 target="http://localhost:10050/upload"
                                 max-files="1" max-file-size="2000000"
-                                accept="application/pdf,image/*" 
+                                
                                 [ng-file-select]="options"
                                 (onUpload)="handleUpload($event)"
                                 >
+                                <!--accept="application/pdf,image/*" -->
                         </vaadin-upload>
                 </div>
 

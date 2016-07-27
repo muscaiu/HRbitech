@@ -7,6 +7,13 @@ import { HomeComponent } from './home/home.component';
 //import { AuthService} from './auth.service';
 
 declare var Auth0Lock;
+  
+var options = {
+    theme: {
+      rememberLastLogin: false,
+      allowedConnections: ['twitter', 'facebook', 'linkedin']
+    }  
+  };
 
 @Component({
   moduleId: module.id,
@@ -18,7 +25,7 @@ declare var Auth0Lock;
 
 export class AppComponent {
 
-  lock = new Auth0Lock('9wy0lBjMWP5oi7irUcdjByrxCvm1uQqC','muscaiuuu.eu.auth0.com')
+  lock = new Auth0Lock('9wy0lBjMWP5oi7irUcdjByrxCvm1uQqC','muscaiuuu.eu.auth0.com', options)
   jwtHelper: JwtHelper = new JwtHelper();
   profile : any;
 

@@ -1,10 +1,17 @@
 import { Component, OnInit} from '@angular/core';
-import { AngularFire, FirebaseObjectObservable ,FirebaseListObservable } from 'angularfire2';
 import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
+import { AngularFire, 
+        FirebaseObjectObservable ,
+        FirebaseListObservable,
+        AuthProviders, 
+        AuthMethods } from 'angularfire2';
 
 @Component({
     template: `
-    
+
+<button (click)="login()">Login</button>
+<!-- <div>{{ (af.auth | async?.uid }}</div> -->
+
 <md-card>
     <md-card-title>Todo</md-card-title>
 
@@ -80,6 +87,16 @@ export class ToDoComponent implements OnInit{
             isFinished = false;
             console.log(isFinished);
         }
+    }
+
+    login(){
+        this._af.auth.login({
+            email: 'admin@admin.admin', 
+            password: 'qwer123'
+        })
+        .then((success) => {
+        console.log("Firebase success: " + JSON.stringify(success));
+        })
     }
 }
 
