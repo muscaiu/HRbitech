@@ -105,7 +105,7 @@ System.config({
     'rxjs': 'vendor/rxjs',
     'main': 'main.js',
     //'angular2-jwt': 'node_modules/angular2-jwt/angular2-jwt'
-    'angular2-jwt': 'https://npmcdn.com/angular2-jwt@0.1.16/angular2-jwt.js'
+    'angular2-jwt': 'https://unpkg.com/angular2-jwt@0.1.16/angular2-jwt.js'
   },
   packages: 
     cliSystemConfigPackages,
